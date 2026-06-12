@@ -16,7 +16,7 @@ public class DefectDetectedConsumer(ILogger<DefectDetectedConsumer> logger) : Ba
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            _logger.LogInformation("DefectDetectedConsumer is running...");
+            _logger.LogDebug("DefectDetectedConsumer skeleton is running...");
             try
             {
                 await Task.Delay(15000, stoppingToken);

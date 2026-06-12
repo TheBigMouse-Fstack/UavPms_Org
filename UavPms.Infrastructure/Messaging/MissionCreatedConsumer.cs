@@ -16,7 +16,7 @@ public class MissionCreatedConsumer(ILogger<MissionCreatedConsumer> logger) : Ba
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            _logger.LogInformation("MissionCreatedConsumer is running...");
+            _logger.LogDebug("MissionCreatedConsumer skeleton is running...");
             try
             {
                 await Task.Delay(15000, stoppingToken);

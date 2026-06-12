@@ -13,7 +13,7 @@ public class CleanupJob(ILogger<CleanupJob> logger, IConfiguration configuration
 
     public Task Execute()
     {
-        _logger.LogInformation("Auto-Cleanup job started: Purging temporary files and logs older than 30 days...");
+        _logger.LogInformation("Auto-Cleanup job started: Purging stored files older than 30 days...");
 
         var imagePath = _configuration["FileStorage:AlertImagesPath"] ?? Path.Combine(Directory.GetCurrentDirectory(), "uav_storage", "images");
         

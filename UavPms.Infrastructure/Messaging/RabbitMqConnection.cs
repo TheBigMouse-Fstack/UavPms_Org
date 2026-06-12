@@ -12,9 +12,7 @@ public class RabbitMqConnection(IConfiguration configuration)
         HostName = configuration["RabbitMQ:HostName"] ?? "localhost",
         UserName = configuration["RabbitMQ:UserName"] ?? "guest",
         Password = configuration["RabbitMQ:Password"] ?? "guest",
-        Port = string.IsNullOrEmpty(configuration["RabbitMQ:Port"]) 
-            ? 5672 
-            : int.Parse(configuration["RabbitMQ:Port"]!)
+        Port = int.TryParse(configuration["RabbitMQ:Port"], out var port) ? port : 5672
     };
 
     public Task<IConnection> CreateConnectionAsync(CancellationToken cancellationToken = default)

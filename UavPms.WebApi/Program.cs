@@ -63,12 +63,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//Hangfire Dashboard
-app.UseHangfireDashboard();
-
-// Tự động chạy Migration khi khởi động
-using (var scope = app.Services.CreateScope())
+// Hangfire Dashboard (Development-only for security)
+if (app.Environment.IsDevelopment())
 {
+    app.UseHangfireDashboard();
+}
+
+// Tự động chạy Migration khi khởi động (dev-only)
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate();
 }
