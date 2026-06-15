@@ -1,4 +1,4 @@
-import { COLORS, LAYOUT, TYPOGRAPHY, SPACING, RADIUS } from '@styles/tokens';
+import { COLORS, TYPOGRAPHY, SPACING, RADIUS } from '@styles/tokens';
 import { useTranslation } from 'react-i18next';
 
 interface SidebarLogoProps {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Layout } from 'antd';
 import { useIsMobile } from '@hooks/useIsMobile';
-import { COLORS, LAYOUT, SPACING, TYPOGRAPHY } from '@styles/tokens';
+import { COLORS, SPACING, TYPOGRAPHY } from '@styles/tokens';
 import Sidebar from './layout/Sidebar';
 import Header from './layout/Header';
 

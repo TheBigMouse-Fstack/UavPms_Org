@@ -1,10 +1,9 @@
-import { Button, Avatar, Badge, Dropdown } from 'antd';
+import { Button, Avatar, Dropdown } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@hooks/useAuth';
-import { ROLE_COLORS, ROLE_LABELS } from '@constants/roles';
 import { getInitials } from '@utils/formatters';
 import { ROUTES } from '@constants/routes';
 import { COLORS, LAYOUT, SPACING, TYPOGRAPHY } from '@styles/tokens';
